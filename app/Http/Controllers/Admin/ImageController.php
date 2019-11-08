@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use App\Model\Product;
+use App\Model\ProductImage;
+use File;
+
 class ImageController extends Controller
 {
      public function index($id)
