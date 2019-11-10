@@ -11,11 +11,11 @@
             <div class="row">
                 <div class="profile">
                     <div class="avatar">
-                        <img src="{{ $product->featured_image_url }}" alt="Circle Image" class="img-circle img-responsive img-raised">
+                        <img src="{{ $product->featured_image_url }}" alt="" class="img-thumbnail img-responsive img-raised">
                     </div>
 
                     <div class="name">
-                        <h3 class="title">{{ $product->name }}</h3>
+                        <h3 class="title">hola{{ $product->name }}</h3>
                         <h6>{{ $product->category->name }}</h6>
                     </div>
 

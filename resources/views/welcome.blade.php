@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Patuto @ Co.')
+@section('title', 'Patuto & Co.')
 
 @section('body-class', 'landing-page')
 
@@ -135,7 +135,7 @@
                     @foreach ($categories as $category)
                     <div class="col-md-4">
                         <div class="team-player">
-                            <img src="{{ $category->featured_image_url }}" alt="Imagen representativa de la categoría {{ $category->name }}" class="img-raised img-circle">
+                            <img src="{{ $category->featured_image_url }}" alt="Imagen representativa de la categoría {{ $category->name }}" class="img-raised img-thumbnails">
                             <h4 class="title">
                                 <a href="{{ url('/categories/'.$category->id) }}">{{ $category->name }}</a>
                             </h4>

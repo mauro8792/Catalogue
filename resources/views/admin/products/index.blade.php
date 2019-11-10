@@ -17,43 +17,30 @@
                 <div class="row">
                    
                     @if(count($products)>0)
-                    <table class="table">
+                    <table class="table table-striped">
                         <thead>
                             <tr class="b-yellow">
                                 <th class="text-center">#</th>
                                 <th class="col-md-2 text-center">Nombre</th>
                                 <th class="col-md-5 text-center">Descripción</th>
                                 <th class="text-center">Categoría</th>
-                                <th class="text-right">Precio</th>
-                                <th class="text-right">Opciones</th>
+                                <th class="text-center">Precio</th>
+                                <th class="text-center" colspan="4">Opciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($products as $product)
                             <tr>
-                                <td class="text-center">{{ $product->id }}</td>
-                                <td>{{ $product->name }}</td>
-                                <td>{{ $product->description }}</td>
-                                <td>{{ $product->category_name }}</td>
+                                <td class="text-right align-middle" valign="middle">{{ $product->id }}</td>
+                                <td class="text-left">{{ $product->name }}</td>
+                                <td class="text-left">{{ $product->description }}</td>
+                                <td class="text-left">{{ $product->category_name }}</td>
                                 <td class="text-right">$ {{ $product->price }}</td>
-                                <td class="td-actions text-right">
-                                    <form method="post" action="{{ url('/admin/products/'.$product->id) }}">
-                                        {{ csrf_field() }}
-                                        {{ method_field('DELETE') }}
-                                        
-                                        <a href="{{ url('/products/'.$product->id) }}" rel="tooltip" title="Ver producto" class="btn btn-info btn-simple btn-xs" target="_blank">
-                                            <i class="fa fa-info"></i>
-                                        </a>
-                                        <a href="{{ url('/admin/products/'.$product->id.'/edit') }}" rel="tooltip" title="Editar producto" class="btn btn-success btn-simple btn-xs">
-                                            <i class="fa fa-edit"></i>
-                                        </a>
-                                        <a href="{{ url('/admin/products/'.$product->id.'/images') }}" rel="tooltip" title="Imágenes del producto" class="btn btn-warning btn-simple btn-xs">
-                                            <i class="fa fa-image"></i>
-                                        </a>
-                                        <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-warning btn-simple btn-xs t-black">
-                                            <i class="fa fa-times"></i>
-                                        </button>
-                                    </form>                                    
+                                <td class="text-right">                                    
+                                    <a href="{{ url('/products/'.$product->id) }}" rel="tooltip" title="Ver producto" target="_blank"><i class="fa fa-info font24 t-blue"></i></a>&nbsp;&nbsp;                                
+                                    <a href="{{ url('/admin/products/'.$product->id.'/edit') }}" rel="tooltip" title="Editar producto"><i class="fa fa-edit font24 t-yellow"></i></a>&nbsp;&nbsp;                                                       
+                                    <a href="{{ url('/admin/products/'.$product->id.'/images') }}" rel="tooltip" title="Imágenes del producto"><i class="fa fa-image font24 t-black"></i></a>&nbsp;&nbsp;
+                                    <a href="{{ url('/admin/products/'.$product->id.'/del') }}" rel="tooltip" title="Eliminar"><i class="fa fa-times font24 t-red"></i></a>&nbsp;
                                 </td>
                             </tr>
                             @endforeach

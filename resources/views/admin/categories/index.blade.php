@@ -35,20 +35,9 @@
                                     <img src="{{ $category->featured_image_url }}" height="50">
                                 </td>
                                 <td class="td-actions text-right">
-                                    <form method="post" action="{{ url('/admin/categories/'.$category->id) }}">
-                                        {{ csrf_field() }}
-                                        {{ method_field('DELETE') }}
-                                        
-                                        <a href="#" rel="tooltip" title="Ver categoría" class="btn btn-info btn-simple btn-xs">
-                                            <i class="fa fa-info"></i>
-                                        </a>
-                                        <a href="{{ url('/admin/categories/'.$category->id.'/edit') }}" rel="tooltip" title="Editar categoría" class="btn btn-success btn-simple btn-xs">
-                                            <i class="fa fa-edit"></i>
-                                        </a>
-                                        <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-warning btn-simple btn-xs t-black">
-                                            <i class="fa fa-times"></i>
-                                        </button>
-                                    </form>                                    
+                                    <a href="#" rel="tooltip" title="Ver categoría"><i class="fa fa-info font24 t-blue"></i></a>&nbsp;&nbsp;
+                                    <a href="{{ url('/admin/categories/'.$category->id.'/edit') }}" rel="tooltip" title="Editar categoría"><i class="fa fa-edit font24 t-yellow"></i></a>&nbsp;&nbsp;
+                                    <a href="{{ url('/admin/categories/'.$category->id.'/del') }}" rel="tooltip" title="Eliminar"><i class="fa fa-times font24 t-red"></i></a>&nbsp;&nbsp;
                                 </td>
                             </tr>
                             @endforeach
