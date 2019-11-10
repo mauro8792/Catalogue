@@ -3,7 +3,7 @@
 @section('body-class', 'product-page')
 
 @section('content')
-<div class="header header-filter" style="background-image: url('{{ asset('img/city.jpg') }}');">
+<div class="header header-filter" style="background-image: url('{{ asset('img/madera6.jpg') }}');">
 </div>
 
 <div class="main main-raised">
@@ -66,7 +66,7 @@
 
                 <textarea class="form-control" placeholder="Descripción extensa del producto" rows="5" name="long_description">{{ old('long_description', $product->long_description) }}</textarea>
 
-                <button class="btn btn-primary">Guardar cambios</button>
+                <button class="btn btn-warning t-black">Guardar cambios</button>
                 <a href="{{ url('/admin/products') }}" class="btn btn-default">Cancelar</a>
             </form>
         </div>
@@ -74,6 +74,4 @@
     </div>
 
 </div>
-
-{{-- @include('includes.footer') --}}
 @endsection

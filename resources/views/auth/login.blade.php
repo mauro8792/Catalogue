@@ -19,16 +19,29 @@
 
                             <div class="input-group">
                                 <span class="input-group-addon">
-                                    <i class="material-icons">fingerprint</i>
+                                    <i class="material-icons">email</i>
                                 </span>
-                                <input id="username" type="text" placeholder="Username" class="form-control" name="username" value="{{ old('username') }}" required autofocus>
+                                {{-- <input id="username" type="text" placeholder="Email" class="form-control" name="email" value="{{ old('email') }}" required autofocus> --}}
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                 @if ($errors->has('email'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
                             </div>
 
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <i class="material-icons">lock_outline</i>
                                 </span>
-                                <input placeholder="Contraseña" id="password" type="password" class="form-control" name="password" required />
+                                {{-- <input placeholder="Contraseña" id="password" type="password" class="form-control" name="password" required /> --}}
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+
+                                @if ($errors->has('password'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }} </strong>
+                                    </span>
+                                @endif
                             </div>
 
                             <div class="checkbox">
@@ -41,15 +54,15 @@
                         <div class="footer text-center">
                             <button type="submit" class="btn btn-simple btn-primary btn-lg">Ingresar</button>
                         </div>
-                        <!-- <a class="btn btn-link" href="{{ route('password.request') }}">
-                            Forgot Your Password?
-                        </a> -->
+                         <a class="btn btn-link text-success" href="{{ route('password.request') }}">
+                                    {{ __('Forgot Your Password?') }}
+                                </a>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
-    {{-- @include('includes.footer') --}}
+     @include('includes.footer') 
 </div>
 @endsection

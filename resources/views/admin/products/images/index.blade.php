@@ -5,7 +5,7 @@
 @section('body-class', 'product-page')
 
 @section('content')
-<div class="header header-filter" style="background-image: url('{{ asset('img/city.jpg') }}');">
+<div class="header header-filter" style="background-image: url('{{ asset('img/madera4.jpg') }}');">
 </div>
 
 <div class="main main-raised">
@@ -16,8 +16,8 @@
             <form method="post" action="" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <input type="file" name="photo" required>    
-                <button type="submit" class="btn btn-primary btn-round">Subir nueva imagen</button>
-                <a href="{{ url('/admin/products') }}" class="btn btn-default btn-round">Volver al listado de productos</a>
+                <button type="submit" class="btn btn-warning btn-round t-black">Subir nueva imagen</button>
+                <a href="{{ url('/admin/products') }}" class="btn btn-warning btn-round t-black">Volver al listado de productos</a>
             </form>
 
             <hr>
@@ -52,6 +52,4 @@
     </div>
 
 </div>
-
-{{-- @include('includes.footer') --}}
 @endsection

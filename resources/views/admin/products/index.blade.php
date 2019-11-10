@@ -5,21 +5,21 @@
 @section('body-class', 'product-page')
 
 @section('content')
-<div class="header header-filter" style="background-image: url('{{ asset('img/city.jpg') }}');">
+<div class="header header-filter" style="background-image: url('{{ asset('img/madera7.jpg') }}');">
 </div>
 
 <div class="main main-raised">
     <div class="container">
         <div class="section text-center">
             <h2 class="title">Listado de productos</h2>
-
-            <div class="team">
+            <a href="{{ url('/admin/products/create') }}" class="btn btn-warning btn-round t-black">Nuevo producto</a>         
+            <div class="team">       
                 <div class="row">
-                    <a href="{{ url('/admin/products/create') }}" class="btn btn-primary btn-round">Nuevo producto</a>
-
+                   
+                    @if(count($products)>0)
                     <table class="table">
                         <thead>
-                            <tr>
+                            <tr class="b-yellow">
                                 <th class="text-center">#</th>
                                 <th class="col-md-2 text-center">Nombre</th>
                                 <th class="col-md-5 text-center">Descripción</th>
@@ -50,7 +50,7 @@
                                         <a href="{{ url('/admin/products/'.$product->id.'/images') }}" rel="tooltip" title="Imágenes del producto" class="btn btn-warning btn-simple btn-xs">
                                             <i class="fa fa-image"></i>
                                         </a>
-                                        <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs">
+                                        <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-warning btn-simple btn-xs t-black">
                                             <i class="fa fa-times"></i>
                                         </button>
                                     </form>                                    
@@ -61,12 +61,13 @@
                     </table>
 
                     {{ $products->links() }}
+                    @else
+                        <h4>No hay productos cargados</h4>
+                    @endif                    
                 </div>
             </div>
         </div>
     </div>
 
 </div>
-
-{{-- @include('includes.footer') --}}
 @endsection

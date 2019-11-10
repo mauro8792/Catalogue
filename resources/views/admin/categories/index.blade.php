@@ -5,21 +5,21 @@
 @section('body-class', 'product-page')
 
 @section('content')
-<div class="header header-filter" style="background-image: url('{{ asset('img/city.jpg') }}');">
+<div class="header header-filter" style="background-image: url('{{ asset('img/madera3.jpg') }}');">
 </div>
 
 <div class="main main-raised">
     <div class="container">
         <div class="section text-center">
             <h2 class="title">Listado de categorías</h2>
-
+            <a href="{{ url('/admin/categories/create') }}" class="btn btn-warning btn-round t-black">Nueva categoría</a>
             <div class="team">
                 <div class="row">
-                    <a href="{{ url('/admin/categories/create') }}" class="btn btn-primary btn-round">Nueva categoría</a>
 
+                    @if(count($categories)>0)
                     <table class="table">
                         <thead>
-                            <tr>
+                            <tr class="b-yellow">
                                 <th class="col-md-2 text-center">Nombre</th>
                                 <th class="col-md-5 text-center">Descripción</th>
                                 <th>Imagen</th>
@@ -45,7 +45,7 @@
                                         <a href="{{ url('/admin/categories/'.$category->id.'/edit') }}" rel="tooltip" title="Editar categoría" class="btn btn-success btn-simple btn-xs">
                                             <i class="fa fa-edit"></i>
                                         </a>
-                                        <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs">
+                                        <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-warning btn-simple btn-xs t-black">
                                             <i class="fa fa-times"></i>
                                         </button>
                                     </form>                                    
@@ -56,12 +56,13 @@
                     </table>
 
                     {{ $categories->links() }}
+                    @else
+                        <h4>No hay categorias cargadas</h4>
+                    @endif
                 </div>
             </div>
         </div>
     </div>
 
 </div>
-
-{{-- @include('includes.footer') --}}
 @endsection

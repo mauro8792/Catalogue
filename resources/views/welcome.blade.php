@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Bienvenido a ' . config('app.name'))
+@section('title', 'Patuto @ Co.')
 
 @section('body-class', 'landing-page')
 
@@ -64,23 +64,20 @@
 @endsection
 
 @section('content')
-<div class="header header-filter" style="background-image: url('{{ asset('/img/banner.jpg') }}');">
+<div class="header header-filter" style="background-image: url('{{ asset('/img/madera5.jpg') }}');">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                {{-- <img src="{{ asset('/img/logo.png') }}" alt="Distribuidora Necochea Día" width="300"> --}}
-                <h1 class="title">Bienvenido a {{ config('app.name') }}.</h1>
+            <div class="col-12">
+                <img src="{{ asset('/images/logo.jpg') }}" alt="Patuto & Co." width="300">
+                <h1 class="title">Bienvenido a Patuto & Co.</h1>
                 <h4>Realiza pedidos en línea y te contactaremos para coordinar la entrega.</h4>
-                {{--<br />--}}
-                {{--<a href="#" class="btn btn-danger btn-raised btn-lg">--}}
-                    {{--<i class="fa fa-play"></i> ¿Cómo funciona?--}}
-                {{--</a>--}}
+                <br>
             </div>
         </div>
     </div>
 </div>
 
-<div class="main main-raised">
+<div class="main main-raised pt-4 bg-warning">
     <div class="container">
         {{--<div class="section text-center section-landing">--}}
             {{--<div class="row">--}}
@@ -123,7 +120,7 @@
             {{--</div>--}}
         {{--</div>--}}
 
-        <div class="section text-center">
+        <div class=" text-center">
             <h2 class="title">Nuestros productos</h2>
 
             {{-- <form class="form-inline" method="get" action="{{ url('/search') }}">
@@ -180,7 +177,7 @@
 
                         <div class="row">
                             <div class="col-md-4 col-md-offset-4 text-center">
-                                <button class="btn btn-primary btn-raised">
+                                <button class="btn btn-warning btn-raised t-black">
                                     Iniciar registro
                                 </button>
                             </div>
@@ -192,8 +189,6 @@
         </div>
     </div>
 </div>
-
-@include('includes.footer')
 @endsection
 
 @section('scripts')

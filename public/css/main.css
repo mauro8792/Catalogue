@@ -1,0 +1,27 @@
+#div_transparente {
+        background-color: rgba(0, 0, 0, 0.2);
+}
+.div_trans2 {
+        background-color: rgba(0, 0, 0, 0.2);
+}
+.div_trans5 {
+        background-color: rgba(0, 0, 0, 0.5);
+}
+.div_trans8 {
+        background-color: rgba(0, 0, 0, 0.8);
+}
+
+.t-white { color: #FFFFFF;}
+.t-white-link { color: #FFFFFF; text-decoration: none;}
+.t-white-link:hover { color: #FF9933; text-decoration: none;}
+.t-black { color: #000000 !important;}
+.t-black-link { color: #000000; text-decoration: none;}
+.t-black-link:hover { color: #666666; text-decoration: none;}
+.t-blue { color: #31708f;}
+.t-blue-link { color: #31708f; text-decoration: none;}
+.t-blue-link:hover { color: #337ab7; text-decoration: none;}
+.t-blue-link:visited { color: #337ab7; text-decoration: none;}
+.t-blue-link:active { color: #337ab7; text-decoration: none;}
+.t-yellow { color: #ffc107;}
+.b-yellow { background-color: #ffc107;}
+-->

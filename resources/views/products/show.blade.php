@@ -3,7 +3,7 @@
 @section('body-class', 'profile-page')
 
 @section('content')
-<div class="header header-filter" style="background-image: url('{{ asset('img/city.jpg') }}');"></div>
+<div class="header header-filter" style="background-image: url('{{ asset('img/madera4.jpg') }}');"></div>
 
 <div class="main main-raised">
     <div class="profile-content">
@@ -97,6 +97,4 @@
     </div>
   </div>
 </div>         
-
-{{-- @include('includes.footer') --}}
 @endsection

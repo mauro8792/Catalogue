@@ -3,7 +3,7 @@
 @section('body-class', 'signup-page')
 
 @section('content')
-<div class="header header-filter" style="background-image: url('{{ asset('img/city.jpg') }}'); background-size: cover; background-position: top center;">
+<div class="header header-filter" style="background-image: url('{{ asset('img/madera2.jpg') }}'); background-size: cover; background-position: top center;">
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
@@ -22,7 +22,7 @@
                     <form class="form" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
-                        <div class="header header-primary text-center">
+                        <div class="header header-warning text-center t-black">
                             <h4>Registro</h4>
                         </div>
                         <p class="text-divider">Completa tus datos</p>
@@ -79,7 +79,7 @@
                             </div>
                         </div>
                         <div class="footer text-center">
-                            <button type="submit" class="btn btn-simple btn-primary btn-lg">Confirmar registro</a>
+                            <button type="submit" class="btn btn-warning t-black">Confirmar registro</a>
                         </div>
                         <!-- <a class="btn btn-link" href="{{ route('password.request') }}">
                             Forgot Your Password? -->
@@ -89,7 +89,5 @@
             </div>
         </div>
     </div>
-
-   {{--  @include('includes.footer') --}}
 </div>
 @endsection
