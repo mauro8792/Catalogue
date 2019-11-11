@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Patuto @ Co.')
+@section('title', 'Patuto & Co.')
 
 @section('body-class', 'landing-page')
 
@@ -66,121 +66,12 @@
 @section('content')
 <div class="header header-filter" style="background-image: url('{{ asset('/img/madera5.jpg') }}');">
     <div class="container">
-        <div class="row-fluid">
-            <div class="col-sm-8">
+        <div class="row">
+            <div class="col-12">
                 <img src="{{ asset('/images/logo.jpg') }}" alt="Patuto & Co." width="300">
                 <h1 class="title">Bienvenido a Patuto & Co.</h1>
                 <h4>Realiza pedidos en línea y te contactaremos para coordinar la entrega.</h4>
-            </div>
-            <div class="col-sm-4 text-center">
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">           
-
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner">
-                    <div class="item active">
-                      <img src={{ asset('./img/presentation/image01.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image02.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image03.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image04.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image05.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image06.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image07.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image08.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image09.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image10.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image11.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image12.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image13.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image14.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>  
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image15.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>  
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image16.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>  
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image17.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>  
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image18.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>  
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image19.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>  
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image20.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image21.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image22.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image23.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image24.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>  
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image25.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>  
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image26.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>  
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image27.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>  
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image28.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>  
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image29.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>                                              
-                    <div class="item">
-                      <img src={{ asset('./img/presentation/image30.jpeg') }} class="img-thumbnail img-responsive" width="300" alt="Patuto and Co.">
-                    </div>                      
-                  </div>
-
-
-
-                  <!-- Left and right controls -->
-                  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                    <span class="fa fa-arrow-circle-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                    <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
+                <br>
             </div>
         </div>
     </div>
@@ -301,9 +192,9 @@
 @endsection
 
 @section('scripts')
-  <script src="{{ asset('/js/typeahead.bundle.min.js') }}"></script>
+  {{--   <script src="{{ asset('/js/typeahead.bundle.min.js') }}"></script>
     <script>
-        /*$(function () {
+        $(function () {
             // 
             var products = new Bloodhound({
               datumTokenizer: Bloodhound.tokenizers.whitespace,
@@ -320,12 +211,6 @@
                 name: 'products',
                 source: products
             });
-        });*/
-
-        $('.carousel').carousel({
-             interval: 2000,
-             pause:true,
-             wrap:true
-        });     
-    </script> 
+        });
+    </script> --}}
 @endsection

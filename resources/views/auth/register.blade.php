@@ -35,13 +35,7 @@
                                 <input type="text" class="form-control" placeholder="Nombre" name="name"
                                        value="{{ old('name', $name) }}" required autofocus>
                             </div>
-                            <div class="input-group">
-                                <span class="input-group-addon">
-                                    <i class="material-icons">fingerprint</i>
-                                </span>
-                                <input type="text" class="form-control" placeholder="Username" name="username"
-                                       value="{{ old('username') }}" required>
-                            </div>                            
+                                                       
 
                             <div class="input-group">
                                 <span class="input-group-addon">
@@ -50,7 +44,7 @@
                                 <input id="email" type="email" placeholder="Correo electrónico" class="form-control" name="email" value="{{ old('email', $email) }}">
                             </div>
 
-                            <div class="input-group">
+                            {{-- <div class="input-group">
                                 <span class="input-group-addon">
                                     <i class="material-icons">phone</i>
                                 </span>
@@ -62,7 +56,7 @@
                                     <i class="material-icons">class</i>
                                 </span>
                                 <input id="address" type="text" placeholder="Dirección" class="form-control" name="address" value="{{ old('address') }}" required>
-                            </div>  
+                            </div> --}}  
 
                             <div class="input-group">
                                 <span class="input-group-addon">
