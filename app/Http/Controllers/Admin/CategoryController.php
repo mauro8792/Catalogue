@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 use App\Model\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Model\ProductImage;
+use App\Model\Product;
 
 class CategoryController extends Controller
 {
@@ -74,8 +76,19 @@ class CategoryController extends Controller
     }
 
     public function destroy(Category $category)
-    {
-        $category->delete(); // DELETE
-        return back();
+    {   
+        $product_id = Product::where('category_id', $category->id)->get();
+        //dd(count($product_id));
+        if( count($product_id)!=0){
+            $product_id = Product::where('category_id', $category->id)->get();
+            //dd($product_id);
+            ProductImage::where('product_id', $product_id)->delete();
+            Product::where('category_id', $category->id)->delete();
+            $category->delete(); // DELETE
+            return back();
+        }else{
+            $category->delete(); // DELETE
+            return back();
+        }
     }
 }

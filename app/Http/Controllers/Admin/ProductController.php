@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Product;
 use App\Model\Category;
+use App\Model\ProductImage;
 
 class ProductController extends Controller
 {
@@ -90,7 +91,7 @@ class ProductController extends Controller
 
     public function destroy($id)
     {
-        CartDetail::where('product_id', $id)->delete();
+       //CartDetail::where('product_id', $id)->delete();
         ProductImage::where('product_id', $id)->delete();
 
         $product = Product::find($id);

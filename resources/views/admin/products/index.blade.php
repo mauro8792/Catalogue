@@ -36,11 +36,18 @@
                                 <td class="text-left">{{ $product->description }}</td>
                                 <td class="text-left">{{ $product->category_name }}</td>
                                 <td class="text-right">$ {{ $product->price }}</td>
-                                <td class="text-right">                                    
-                                    <a href="{{ url('/products/'.$product->id) }}" rel="tooltip" title="Ver producto" target="_blank"><i class="fa fa-info font24 t-blue"></i></a>&nbsp;&nbsp;                                
-                                    <a href="{{ url('/admin/products/'.$product->id.'/edit') }}" rel="tooltip" title="Editar producto"><i class="fa fa-edit font24 t-yellow"></i></a>&nbsp;&nbsp;                                                       
-                                    <a href="{{ url('/admin/products/'.$product->id.'/images') }}" rel="tooltip" title="Imágenes del producto"><i class="fa fa-image font24 t-black"></i></a>&nbsp;&nbsp;
-                                    <a href="{{ url('/admin/products/'.$product->id.'/del') }}" rel="tooltip" title="Eliminar"><i class="fa fa-times font24 t-red"></i></a>&nbsp;
+                                <td class="text-right"> 
+                                    <form action="{{ url('/admin/products/'.$product->id)}}" method="post">
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE')}}                                   
+                                        <a href="{{ url('/products/'.$product->id) }}" rel="tooltip" title="Ver producto" target="_blank"><i class="fa fa-info font24 t-blue"></i></a>&nbsp;&nbsp;                                
+                                        <a href="{{ url('/admin/products/'.$product->id.'/edit') }}" rel="tooltip" title="Editar producto"><i class="fa fa-edit font24 t-yellow"></i></a>&nbsp;&nbsp;                                                       
+                                        <a href="{{ url('/admin/products/'.$product->id.'/images') }}" rel="tooltip" title="Imágenes del producto"><i class="fa fa-image font24 t-black"></i></a>&nbsp;&nbsp;
+                                        {{-- <a href="{{ url('/admin/products/'.$product->id.'/del') }}" rel="tooltip" title="Eliminar"><i class="fa fa-times font24 t-red"></i></a>&nbsp; --}}
+                                        <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach
